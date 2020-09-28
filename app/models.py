@@ -51,7 +51,7 @@ class User(UserMixin, db.Model):
 
 class Blog(db.Model):
     '''
-    Pitch class to define Pitch Objects
+    Blog class to define Blog Objects
     '''
     __tablename__ = 'blog'
 
@@ -67,7 +67,7 @@ class Blog(db.Model):
 
     def save_blog(self):
         '''
-        Function that saves pitches
+        Function that saves Blogs
         '''
         db.session.add(self)
         db.session.commit()
@@ -75,7 +75,7 @@ class Blog(db.Model):
     @classmethod
     def get_all_blogs(cls):
         '''
-        Function that queries the databse and returns all the pitches
+        Function that queries the databse and returns all the Blogs
         '''
         return Blog.query.all()
 
