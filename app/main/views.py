@@ -17,9 +17,9 @@ def index():
     View root page function that returns the index page and its data
     '''
     posts = Blog.query.order_by(Blog.date.desc()).all()
-
+    quotes = get_quotes()
     title = 'Home - Welcome to the bloging site'
-    return render_template('index.html', title = title,quotes = quotes, posts=posts)
+    return render_template('index.html', title = title, posts=posts, quotes = quotes)
 
 @main.route('/about')
 def about():
