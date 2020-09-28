@@ -74,7 +74,7 @@
           </ul>
         </li>
         {% else %}
-        <li><a href="{{url_for('auth.login')}}" class="text-light"><i class="fa fa-sign-in mr-2"></i><strong>Sign
+        <li><a href="{{url_for('auth.login')}}" class="text-dark"><i class="fa fa-sign-in mr-2"></i><strong>Sign
               In</strong></a></li>
         {%endif%}
       </ul>
@@ -87,7 +87,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading text-center text-dark pt-5" style="padding-top: 20px;">
+          <div class="site-heading text-center text-dark pt-5">
             <h1>Anna's Blog</h1>
             <span class="subheading">Feel free to comment on a blog and post blog on sign up</span>
           </div>
@@ -105,10 +105,8 @@
             <h2>Quote of the day...</h2>
           </div>
           <div class="card-body">
-            <!-- <blockquote class="blockquote text-center"> -->
-              <p class="mb-0">{{quotes.quote}}</p>
-              <footer class="blockquote-footer"><cite>{{quotes.author}}</cite></footer>
-            <!-- </blockquote> -->
+            <h2>{{quotes.author}}</h2>
+            <p>{{ quotes.quote }}</p>
           </div>
         </div>
       </div>
@@ -123,7 +121,7 @@
               {{post.subtitle}}
             </h3>
           </a>
-          <p class="post-meta">Posted by {{post.user.username}} on {{post.date.strftime('%B %d, %Y')}}</p>
+          <p classtitle="post-meta">Posted by {{post.user.username}} on {{post.date.strftime('%B %d, %Y')}}</p>
         </div>
         <hr>
         {% endfor %}
@@ -141,7 +139,9 @@
     </div>
   </footer>
 
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- Bootstrap core JavaScript -->
   <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
   <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
