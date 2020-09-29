@@ -16,6 +16,14 @@ Here is the [Link](https://blogiapp.herokuapp.com/) to my website
 * Pip
 * CSS
 
+## Specification
+| Behaviour | Input | Output |
+| :------------ |:---------------:| -----:|
+| view block post| sign up for account | sign in  |
+| view post     | add post  | submit  |
+| all post | view more    | see comments and add post |
+| add post | update | delete
+
 ## Support and contact details
 * contact@ annaadhiambo01@gmail.com
 
