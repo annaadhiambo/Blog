@@ -5,7 +5,7 @@
 
 ## Description
 * A personal blogging website where someone can create and share your opinions and other users can read and comment on them.
-Here is the [Link]() to my website
+Here is the [Link](https://blogiapp.herokuapp.com/) to my website
 
 
 ## Technology Used
